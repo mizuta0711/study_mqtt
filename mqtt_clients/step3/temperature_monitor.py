@@ -26,7 +26,7 @@ def on_connect(client, userdata, flags, rc):
         print("📡 温度モニターを開始しました")
         client.subscribe(TOPIC)
 
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 client.on_connect = on_connect
 client.on_message = on_message
 

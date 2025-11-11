@@ -11,7 +11,7 @@ locations = [
     "配達完了"
 ]
 
-client = mqtt.Client("DeliveryVan01")
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "DeliveryVan01")
 client.connect("localhost", 1883, 60)
 
 print("🚚 配達車両シミュレータ")

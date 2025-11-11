@@ -7,7 +7,7 @@ BROKER = "localhost"
 PORT = 1883
 TOPIC = "home/livingroom/temperature"
 
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 client.connect(BROKER, PORT, 60)
 
 print("🌡️  温度センサーシミュレータを起動しました")

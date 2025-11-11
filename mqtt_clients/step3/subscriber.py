@@ -28,7 +28,7 @@ def on_connect(client, userdata, flags, rc):
         print(f"❌ 接続失敗: エラーコード {rc}")
 
 # MQTTクライアントを作成
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 
 # コールバック関数を登録
 client.on_connect = on_connect

@@ -25,7 +25,7 @@ def on_message(client, userdata, msg):
 def on_connect(client, userdata, flags, rc):
     client.subscribe("game/dice/#")
 
-client = mqtt.Client("Player2")
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "Player2")
 client.on_connect = on_connect
 client.on_message = on_message
 client.connect("localhost", 1883, 60)

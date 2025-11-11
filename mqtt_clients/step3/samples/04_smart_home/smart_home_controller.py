@@ -8,7 +8,7 @@ def on_message(client, userdata, msg):
 def on_connect(client, userdata, flags, rc):
     client.subscribe("home/status/#")
 
-client = mqtt.Client("Controller")
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "Controller")
 client.on_connect = on_connect
 client.on_message = on_message
 client.connect("localhost", 1883, 60)

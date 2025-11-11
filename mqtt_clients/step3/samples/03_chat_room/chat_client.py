@@ -18,7 +18,7 @@ username = input("ユーザー名を入力: ")
 print(f"\n👋 ようこそ、{username}さん！")
 print("💬 メッセージを入力してください（'quit'で終了）\n")
 
-client = mqtt.Client(username)
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, username)
 client.on_connect = on_connect
 client.on_message = on_message
 client.connect("localhost", 1883, 60)

@@ -8,7 +8,7 @@ PORT = 1883
 TOPIC = "test/hello"
 
 # MQTTクライアントを作成
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 
 print("🔌 MQTTブローカーに接続中...")
 client.connect(BROKER, PORT, 60)

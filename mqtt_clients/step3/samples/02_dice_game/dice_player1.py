@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 import random
 import time
 
-client = mqtt.Client("Player1")
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "Player1")
 client.connect("localhost", 1883, 60)
 
 print("🎲 プレイヤー1です")

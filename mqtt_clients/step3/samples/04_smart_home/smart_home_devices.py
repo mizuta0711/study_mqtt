@@ -31,7 +31,7 @@ def on_connect(client, userdata, flags, rc):
     print("🏠 スマートホームシステム起動")
     client.subscribe("home/control/#")
 
-client = mqtt.Client("HomeDevices")
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "HomeDevices")
 client.on_connect = on_connect
 client.on_message = on_message
 client.connect("localhost", 1883, 60)

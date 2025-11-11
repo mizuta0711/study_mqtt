@@ -9,7 +9,7 @@ stocks = {
     "TSLA": 700.0
 }
 
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 client.connect(BROKER, 1883, 60)
 
 print("📈 株価シミュレータを開始...")

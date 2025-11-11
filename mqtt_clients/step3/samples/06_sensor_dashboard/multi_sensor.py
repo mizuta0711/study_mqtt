@@ -3,7 +3,7 @@ import random
 import time
 import json
 
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 client.connect("localhost", 1883, 60)
 
 print("📊 複数センサーシミュレータ")

@@ -36,7 +36,7 @@ def on_subscribe(client, userdata, mid, granted_qos):
 def on_log(client, userdata, level, buf):
     print(f"📝 ログ: {buf}")
 
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 client.on_connect = on_connect
 client.on_disconnect = on_disconnect
 client.on_message = on_message

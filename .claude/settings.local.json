@@ -12,7 +12,8 @@
       "Bash(docker-compose logs:*)",
       "mcp__serena__list_dir",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(find:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
