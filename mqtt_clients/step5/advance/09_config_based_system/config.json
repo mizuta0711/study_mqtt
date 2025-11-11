@@ -1,0 +1,57 @@
+{
+  "broker": {
+    "host": "localhost",
+    "port": 1883,
+    "username": null,
+    "password": null
+  },
+  "sensors": [
+    {
+      "id": "living-room-temp",
+      "type": "temperature",
+      "location": "リビング",
+      "topic": "sensors/living-room/temperature",
+      "interval": 1,
+      "qos": 0,
+      "thresholds": {
+        "min": 18.0,
+        "max": 30.0
+      }
+    },
+    {
+      "id": "bedroom-humid",
+      "type": "humidity",
+      "location": "寝室",
+      "topic": "sensors/bedroom/humidity",
+      "interval": 2,
+      "qos": 0,
+      "thresholds": {
+        "min": 30.0,
+        "max": 70.0
+      }
+    },
+    {
+      "id": "kitchen-light",
+      "type": "light",
+      "location": "キッチン",
+      "topic": "sensors/kitchen/light",
+      "interval": 1,
+      "qos": 0,
+      "thresholds": {
+        "min": 0,
+        "max": 1000
+      }
+    }
+  ],
+  "alerts": {
+    "enabled": true,
+    "console": true,
+    "email": false,
+    "slack": false
+  },
+  "logging": {
+    "enabled": true,
+    "file": "sensor_log.txt",
+    "level": "INFO"
+  }
+}

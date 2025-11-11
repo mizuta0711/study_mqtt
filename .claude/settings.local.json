@@ -13,7 +13,10 @@
       "mcp__serena__list_dir",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(pip install:*)",
+      "Bash(pip show:*)",
+      "Bash(docker ps:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
